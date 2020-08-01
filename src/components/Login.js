@@ -79,7 +79,7 @@ const {password,email}=this.state
 <div className="text-center">
 <SkeletonTheme color="rgb(0 123 255)" highlightColor="white">
   
-  <Skeleton circle={true} height={500} width={500} />
+  <Skeleton circle={true} height={100} width={100} />
  <h3 style={blue} > Please wait...</h3>
 
   
