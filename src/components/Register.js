@@ -100,8 +100,8 @@ const { password,confirmed,name,email,error} =this.state
     
            <div>
            <Row>
-<Col md={3} sm={3} xs={3}></Col>
-<Col md={6} sm={6} xs={6}>
+<Col md={3} sm={1} xs={1}></Col>
+<Col md={6} sm={10} xs={10}>
 <Card className="bg-default small">
   <Card.Header>
          <span className="fa fa-registered"></span>
@@ -137,7 +137,7 @@ const { password,confirmed,name,email,error} =this.state
 </Card.Body>
 </Card>
 </Col>
-<Col  md={3} sm={3} xs={3}></Col>
+<Col  md={3} sm={1} xs={1}></Col>
 </Row>
 </div>
   )
