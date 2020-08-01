@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import Skeleton from "react-loading-skeleton";
 import { Row,Col,Alert} from 'react-bootstrap'
+import Below from './components/Below'
 
 import UserSubmit from './components/UserSubmit'
 import axios from 'axios'
