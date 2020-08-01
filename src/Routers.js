@@ -42,22 +42,34 @@ render(){
   return (
 <div>
 <Row>
-<Col >
+<Col md={12} sm={12} xs={12} >
 <h3 className="text-center"><Alert variant="primary">
 <strong>Working With Restful API</strong></Alert></h3>
 </Col>
+<Col md={12} sm={12} xs={12} >
+<Row>
+           <Col md={2} > 
+</Col>
+           <Col md={8} sm={12} xs={12}> 
+<Below/>
+</Col>
+<Col md={2} > 
+</Col>
 </Row>
+</Col>
+
+
 {this.state.loading?
-
-
 <Skeleton count={20} />
-
-
 :
+<Col md={12} sm={12} xs={12}> 
+
 <UserSubmit data={data} getAll={this.getAll}/>
+
+</Col>
 }
 
-
+</Row>
   </div>
   );
 }
