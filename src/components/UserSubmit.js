@@ -96,11 +96,8 @@ const {visibility,success,error,iserror,name,email,address,age}=this.state
 const {data}=this.props
   return (
            <div>
-           <Row className="body">
-         <Col md={6} sm={6} xs={6} >
-         <SideBody data={data}/>
-         </Col>
-         <Col md={6} sm={6} xs={6}> 
+    <Row className="body">
+          <Col md={6} sm={12} xs={12}> 
          <Row>
          <Col>
 <Button variant="primary"  onClick={this.onClick} className="pull-right button" size="lg">
@@ -142,11 +139,11 @@ const {data}=this.props
 </Col>
 </Row>
 
-<Row>
-<Below/>
-</Row>
 </Col>
-</Row>
+<Col md={6} sm={12} xs={12}>
+         <SideBody data={data}/>
+         </Col>
+     </Row>    
 </div>
   );
 }
