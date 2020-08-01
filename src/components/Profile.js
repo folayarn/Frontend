@@ -22,7 +22,7 @@ this.state={
  
  
      componentDidMount(){
-         axios.get('http://localhost:8000/api/user',{
+         axios.get('https://backendj.herokuapp.com/api/user',{
              headers:{Authorization: `Bearer ${localStorage.usertoken}`}
  
          }).then((res)=>{
