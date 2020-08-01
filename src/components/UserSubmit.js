@@ -97,10 +97,10 @@ const {data}=this.props
   return (
            <div>
            <Row className="body">
-         <Col >
+         <Col md={6} sm={6} xs={6} >
          <SideBody data={data}/>
          </Col>
-         <Col> 
+         <Col md={6} sm={6} xs={6}> 
          <Row>
          <Col>
 <Button variant="primary"  onClick={this.onClick} className="pull-right button" size="lg">
