@@ -10,7 +10,7 @@ margin-top: 50px;
 }
 
 .body{
-  background-color:#d3ebf9 ;
+  
   margin-top: 50px;
   color: black;
 }
@@ -67,6 +67,6 @@ text-decoration: none;
   list-style: none;
 }
 body{
-
+margin-top:0px;
   
 }
