@@ -10,12 +10,12 @@ import { Row,Col} from 'react-bootstrap'
 
 <Col >
 <Row>
-<Col md={1} sm={1} xs={1} >
+<Col md={1}>
 
 
 </Col> 
  
-<Col className='text-left api' >
+<Col className='text-left api' md={10} sm={12} xs={12}  >
  <h1>Available Api</h1>
 
  <ul>
@@ -75,7 +75,7 @@ import { Row,Col} from 'react-bootstrap'
 
 
  </Col>
- <Col md={1} sm={1} xs={1}>
+ <Col md={1}>
 
  </Col>
 </Row>
