@@ -36,7 +36,7 @@ onSubmit=(e)=>{
   User.append('name',this.state.name)
   
   return axios
-  .post('http://localhost:8000/api/signup',
+  .post('https://backendj.herokuapp.com/api/signup',
     User
   ,{
       headers:{'Content-type':'application/json'}
