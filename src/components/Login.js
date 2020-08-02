@@ -76,7 +76,7 @@ const {password,email}=this.state
     {
   return (
     this.state.done ?
-<div className="text-center">
+<div className="text-center drop">
 <SkeletonTheme color="rgb(0 123 255)" highlightColor="white">
   
   <Skeleton circle={true} height={100} width={100} />
