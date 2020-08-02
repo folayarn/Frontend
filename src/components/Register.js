@@ -3,6 +3,7 @@ import {Col,Row,Form ,Button,Card} from 'react-bootstrap'
 import Skeleton ,{ SkeletonTheme } from  "react-loading-skeleton"
 import {Redirect,Link} from 'react-router-dom'
 import axios from 'axios'
+import Header from './Header'
 
 
 
@@ -86,10 +87,10 @@ const { password,confirmed,name,email,error} =this.state
 
   return (
     this.state.done ?
-    <div className="text-center">
+    <div className="text-center drop">
     <SkeletonTheme color="rgb(0 123 255)" highlightColor="white">
       
-      <Skeleton circle={true} height={500} width={500} />
+      <Skeleton circle={true} height={100} width={100} />
      <h3 style={blue} > Signing Up...</h3>
     
       
@@ -99,15 +100,15 @@ const { password,confirmed,name,email,error} =this.state
         :
     
            <div>
+           <Header/>
            <Row>
-<Col md={3} sm={3} xs={3}></Col>
-<Col md={6} sm={6} xs={6}>
+<Col md={3} sm={1} xs={1}></Col>
+<Col md={6} sm={10} xs={10}>
 <Card className="bg-default small">
   <Card.Header>
          <span className="fa fa-registered"></span>
 </Card.Header>
 <Card.Body>
-
 <h6 style={color}>{error}</h6>
 <Form >
 <Form.Group>
@@ -137,7 +138,7 @@ const { password,confirmed,name,email,error} =this.state
 </Card.Body>
 </Card>
 </Col>
-<Col  md={3} sm={3} xs={3}></Col>
+<Col  md={3} sm={1} xs={1}></Col>
 </Row>
 </div>
   )

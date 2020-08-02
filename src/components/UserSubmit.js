@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import {Col,Row,Form ,Card,Button} from 'react-bootstrap'
 import Skeleton,{ SkeletonTheme } from "react-loading-skeleton";
 import SideBody from './SideBody'
-import Below from './Below'
+
 import axios from 'axios'
 
 
@@ -96,11 +96,8 @@ const {visibility,success,error,iserror,name,email,address,age}=this.state
 const {data}=this.props
   return (
            <div>
-           <Row className="body">
-         <Col >
-         <SideBody data={data}/>
-         </Col>
-         <Col> 
+    <Row className="body">
+          <Col md={6} sm={12} xs={12}> 
          <Row>
          <Col>
 <Button variant="primary"  onClick={this.onClick} className="pull-right button" size="lg">
@@ -142,11 +139,11 @@ const {data}=this.props
 </Col>
 </Row>
 
-<Row>
-<Below/>
-</Row>
 </Col>
-</Row>
+<Col md={6} sm={12} xs={12}>
+         <SideBody data={data}/>
+         </Col>
+     </Row>    
 </div>
   );
 }

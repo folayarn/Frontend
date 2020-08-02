@@ -48,7 +48,7 @@ render(){
 <Card.Text>
   <small><i>Registered <span className="fa fa-clock-o" style={padding}>
 
-  </span>{moment(user.created_at).fromNow()} </i></small>
+  </span>{moment(user.created_at).calendar()} </i></small>
 </Card.Text>
 </Card.Body>
 </Card>

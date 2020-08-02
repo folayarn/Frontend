@@ -3,6 +3,7 @@ import {Col,Row,Form ,Button,Card} from 'react-bootstrap'
 import {Redirect,Link} from 'react-router-dom'
 import {login} from '../Functions'
 import Skeleton ,{ SkeletonTheme } from  "react-loading-skeleton"
+import Header from './Header'
 
 
 
@@ -75,11 +76,14 @@ const {password,email}=this.state
     }else
     {
   return (
-    this.state.done ?
-<div className="text-center">
+    
+  this.state.done ?
+
+<div className="text-center drop" >
+  
 <SkeletonTheme color="rgb(0 123 255)" highlightColor="white">
   
-  <Skeleton circle={true} height={500} width={500} />
+  <Skeleton circle={true} height={100} width={100} />
  <h3 style={blue} > Please wait...</h3>
 
   
@@ -88,9 +92,10 @@ const {password,email}=this.state
 </div>
     :
     <div>
+    <Header/>
     <Row>
-    <Col md={3} sm={3} xs={3}></Col>
-    <Col md={6} sm={6} xs={6}>
+    <Col md={3} sm={1} xs={1}></Col>
+    <Col  md={6} sm={10} xs={10}>
   <Card className="bg-default small">
   <Card.Header>
          <span className="fa fa-user"></span>
@@ -117,7 +122,7 @@ className="pull-right" onClick={this.onSubmit} size="sm"><span className="fa fa-
 </Card.Body>
 </Card>
 </Col>
-<Col md={3} sm={3} xs={3}></Col>
+<Col md={3} sm={1} xs={1}></Col>
 </Row>
 </div>
   )

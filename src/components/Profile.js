@@ -1,108 +1,34 @@
 import React,{Component} from 'react';
-import {Redirect } from 'react-router-dom'
-import { Row,Col,Form} from 'react-bootstrap'
-import axios from 'axios'
+import { Row,Col} from 'react-bootstrap'
 import Documentation from './Documentation'
-import Skeleton from "react-loading-skeleton";
-
-
+import DataBody from './DataBody'
+import {Redirect} from 'react-router-dom'
 
 class Profile extends Component{
   
-constructor(){
-super()
-this.state={
-  id:'',
-  name:'',
-  email:'',
-  loading:true
-         }
-         
-     }
- 
- 
-     componentDidMount(){
-         axios.get('http://localhost:8000/api/user',{
-             headers:{Authorization: `Bearer ${localStorage.usertoken}`}
- 
-         }).then((res)=>{
-             this.setState({
-             name:res.data.name,
-             id:res.data.id,
-             email:res.data.email,
-             loading:false
-             })
-         })
-     }
- 
- 
-   
- 
- 
- 
- 
- 
- 
- 
-     
+
 
 
 render(){
+  const user={
+    id:this.props.id,
+    name:this.props.name,
+    email:this.props.email,
+    loading:this.props.loading
+  }
 
-  const {id,name,email,}=this.state
-
-         if(localStorage.usertoken){
+  if(localStorage.usertoken){
   return (
     <div>
-    <Col>
 <Row>
-<Col md={2} sm={2} xs={2}>
-</Col>
-<Col md={8} sm={8} xs={8} className="apiback">
-<h1>welcome home!!</h1>
-{this.state.loading?
-
-
-<Skeleton count={15} />
-
-
-:
-<table className="table striped">
-<tr>
-  <td>Client ID:</td>
-  <td>{id}</td>
-</tr>
-<tr>
-  <td>Name:</td>
-  <td>{name}</td>
-</tr>
-<tr>
-  <td>Email:</td>
-  <td>{email}</td>
-</tr>
-<tr>
-  <td>Bearer Token:</td>
-  <td>
-  <Form>
-    <Form.Group>
-
-<Form.Control value={localStorage.usertoken} as="textarea" cols={60} rows={10}/>
-</Form.Group>
-</Form>
-
-  </td>
-</tr>
-
-</table>
-}
+<Col md={2} sm={1} xs={1}>
 
 </Col>
-
-
-<Col md={2} sm={2} xs={2}></Col>
+<DataBody {...user}/>
+<Col md={2} sm={1} xs={1}></Col>
 </Row>
-</Col>
-<Col>
+
+<Col md={12} sm={12} xs={12}>
 <Row>
   <Documentation/>
 </Row>
@@ -110,7 +36,7 @@ render(){
   </div>
   );
 }else{
-         return(<Redirect to='/login'/>)
+  return(<Redirect to='/login'/>)
 }
 }
 }

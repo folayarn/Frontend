@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row,Col} from 'react-bootstrap'
+import { Row,Col,Alert} from 'react-bootstrap'
 
 
 
@@ -15,55 +15,54 @@ import { Row,Col} from 'react-bootstrap'
 
 </Col> 
  
-<Col className='text-left api' >
+<Col className='text-left api' md={10} sm={10} xs={10} >
  <h1>Available Api</h1>
 
- <ul>
-          <li> GET : /api/allusers
-          <ul>
-         <li> Fetch all users
+ <Alert variant="dark">
+          <Alert.Heading> 
+         Fetch all users
+         </Alert.Heading>
+       <p>  GET : /api/allusers</p>
+         <p> Example</p>
+         <p>http://example.com /api/allusers </p>
+         <p className="mb-0">Authicatication is Required for this Api with your Bearer Token</p>
+         </Alert>
+          
+         <Alert variant="primary">
+          <Alert.Heading> 
+          Fetch any amount of users
+          </Alert.Heading>
+        <p>  GET : /api/allusers/[number]</p>
+          
          
          <p> Example</p>
-         <p>http://example.com/api/allusers </p>
-         <p>Authicatication is Required for this Api with your Bearer Token</p>
-         </li>
-</ul>
+         <p>http://example.com /api/allusers/[number] </p>
+         <p className="mb-0">Authicatication is Required for this Api with your Bearer Token</p>
+        
           
-          </li>
+          </Alert>
 
-          <li> GET : /api/allusers/[number]
-          <ul>
-         <li> Fetch any amount of users
+          <Alert variant="success">
+          <Alert.Heading>
+          Fetch single user
+          </Alert.Heading>
+         <p> GET : /api/alluser/[id]</p>
          <p> Example</p>
-         <p>http://example.com/api/allusers/[number] </p>
-         <p>Authicatication is Required for this Api with your Bearer Token</p>
-         </li>
-</ul>
-          
-          </li>
+         <p>http://example.com /api/alluser/[id] </p>
+         <p className="mb-0">Authicatication is Required for this Api with your Bearer Token</p>
+        </Alert>
+          <Alert variant="secondary">
+          <Alert.Heading> 
+          Add user to the list 
+          </Alert.Heading>
 
-          <li> GET : /api/alluser/[id]
-          <ul>
-         <li> Fetch single user
+          <p>POST: /api/push</p>
+        
+         
          <p> Example</p>
-         <p>http://example.com/api/alluser/[id] </p>
-         <p>Authicatication is Required for this Api with your Bearer Token</p>
-         </li>
-</ul>
-          
-          </li>
-          
-          <li> POST: /api/push
-          <ul>
-         <li> Add user to the list 
-         <p> Example</p>
-         <p>http://example.com/api/push </p>
-         <p>This is an open Api, no Authentication is required</p>
-         </li>
-</ul>
-          </li>
-
- </ul>
+         <p>http://example.com /api/push </p>
+         <p className="mb-0">This is an open Api, no Authentication is required</p>
+  </Alert>
 
 
 
