@@ -1,10 +1,10 @@
 import React,{Component} from 'react';
-import {Col,Button} from 'react-bootstrap'
+import {Col} from 'react-bootstrap'
 import {Route,Switch} from 'react-router-dom'
 import axios from 'axios'
 import Profile from './Profile'
 import Home from './Home'
-import HeaderPro from './HeaderPro'
+
 
 
 
@@ -16,11 +16,10 @@ class LoginSwitch extends Component{
                     id:'',
                     name:'',
                     email:'',
-                    loading:true,
-                    isnotlog:false
+                    loading:true
+    
                            }
-                           this.logout=this.logout.bind(this)
-                       }
+                                             }
                    
                        componentDidMount(){
                            axios.get('https://backendj.herokuapp.com/api/user',{
@@ -39,13 +38,7 @@ class LoginSwitch extends Component{
                    
                    
        
-  logout=(e)=>{
-    e.preventDefault()
-localStorage.removeItem('usertoken')
-this.setState({
- isnotlog:true
-})
-}
+  
                   
                    
                    
@@ -58,25 +51,23 @@ render(){
            name:this.state.name,
            email:this.state.email,
            loading:this.state.loading,
-           isnotlog:this.state.isnotlog
+           
          }
        
   return (
            <div>
-           <HeaderPro/>
-          <Button size='sm' variant="danger" 
-          onClick={this.logout}>
-         <span className="fa fa-sign-out"></span>Logout</Button>
+           
+          
 
 
 
 
 <Col md={12} sm={12} xs={12}>
 <Switch>
-<Route exact path='/profile'>
+<Route path='/profile'>
 <Profile {...user}/>
 </Route>
-<Route  path='/profile/home'>
+<Route path='/profile/home'>
 <Home name={this.state.name}/>
 </Route>
 </Switch>
