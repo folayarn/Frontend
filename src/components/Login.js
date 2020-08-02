@@ -76,11 +76,16 @@ const {password,email}=this.state
     }else
     {
   return (
+<<<<<<< HEAD
     
   this.state.done ?
 
 <div className="text-center drop" >
   
+=======
+    this.state.done ?
+<div className="text-center drop">
+>>>>>>> 37c15e85476ef111c9e927a9ecc68ac750b74a28
 <SkeletonTheme color="rgb(0 123 255)" highlightColor="white">
   
   <Skeleton circle={true} height={100} width={100} />
@@ -95,7 +100,11 @@ const {password,email}=this.state
     <Header/>
     <Row>
     <Col md={3} sm={1} xs={1}></Col>
+<<<<<<< HEAD
     <Col  md={6} sm={10} xs={10}>
+=======
+    <Col md={6} sm={10} xs={10}>
+>>>>>>> 37c15e85476ef111c9e927a9ecc68ac750b74a28
   <Card className="bg-default small">
   <Card.Header>
          <span className="fa fa-user"></span>

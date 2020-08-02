@@ -47,7 +47,7 @@ let detail={
 }
 
  return axios
-            .post('http://localhost:8000/api/push',
+            .post('https://backendj.herokuapp.com/api/push',
               detail
             , {
                 headers: {
