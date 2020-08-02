@@ -1,13 +1,27 @@
 import React,{Component} from 'react';
-import { Row,Col} from 'react-bootstrap'
+import { Row,Col,Button} from 'react-bootstrap'
 import Documentation from './Documentation'
 import DataBody from './DataBody'
 import {Redirect} from 'react-router-dom'
+import HeaderPro from './HeaderPro'
 
 class Profile extends Component{
-  
+  constructor(){
+  super()
+  this.state={
+    
+    isnotlog:false
+           }
+           this.logout=this.logout.bind(this)
+       }
 
-
+  logout=(e)=>{
+    e.preventDefault()
+localStorage.removeItem('usertoken')
+this.setState({
+ isnotlog:true
+})
+}
 render(){
   const user={
     id:this.props.id,
@@ -20,6 +34,10 @@ render(){
 
   return (
     <div>
+    <HeaderPro/>
+    <Button size='sm' variant="danger" 
+          onClick={this.logout}>
+         <span className="fa fa-sign-out"></span>Logout</Button>
 <Row>
 <Col md={2} sm={1} xs={1}>
 
