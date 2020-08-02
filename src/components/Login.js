@@ -85,6 +85,9 @@ const {password,email}=this.state
 =======
     this.state.done ?
 <div className="text-center drop">
+<<<<<<< HEAD
+>>>>>>> 37c15e85476ef111c9e927a9ecc68ac750b74a28
+=======
 >>>>>>> 37c15e85476ef111c9e927a9ecc68ac750b74a28
 <SkeletonTheme color="rgb(0 123 255)" highlightColor="white">
   
@@ -101,7 +104,11 @@ const {password,email}=this.state
     <Row>
     <Col md={3} sm={1} xs={1}></Col>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Col  md={6} sm={10} xs={10}>
+=======
+    <Col md={6} sm={10} xs={10}>
+>>>>>>> 37c15e85476ef111c9e927a9ecc68ac750b74a28
 =======
     <Col md={6} sm={10} xs={10}>
 >>>>>>> 37c15e85476ef111c9e927a9ecc68ac750b74a28

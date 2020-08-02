@@ -1,68 +1,15 @@
 import React,{Component} from 'react';
-<<<<<<< HEAD
 import { Row,Col} from 'react-bootstrap'
-=======
-import {Redirect } from 'react-router-dom'
-import { Row,Col,Form,Button} from 'react-bootstrap'
-import axios from 'axios'
->>>>>>> 37c15e85476ef111c9e927a9ecc68ac750b74a28
 import Documentation from './Documentation'
 import DataBody from './DataBody'
 import {Redirect} from 'react-router-dom'
 
 class Profile extends Component{
   
+
+
+
 <<<<<<< HEAD
-=======
-constructor(){
-super()
-this.state={
-  id:'',
-  name:'',
-  email:'',
-  loading:true,
-  isnotlog:false
-         }
-         this.logout=this.logout.bind(this)
-     }
- 
- 
-     componentDidMount(){
-         axios.get('https://backendj.herokuapp.com/api/user',{
-             headers:{Authorization: `Bearer ${localStorage.usertoken}`}
- 
-         }).then((res)=>{
-             this.setState({
-             name:res.data.name,
-             id:res.data.id,
-             email:res.data.email,
-             loading:false
-             
-             })
-         })
-        }
- 
- 
-   
- 
- 
- 
- 
- 
-        logout=(e)=>{
-          e.preventDefault()
-      localStorage.removeItem('usertoken')
-      this.setState({
-       isnotlog:true
-      })
-      }
- 
- 
-     
->>>>>>> 37c15e85476ef111c9e927a9ecc68ac750b74a28
-
-
-
 <<<<<<< HEAD
 render(){
   const user={
@@ -78,10 +25,16 @@ render(){
 
          if(localStorage.usertoken||!isnotlog ){
 >>>>>>> 37c15e85476ef111c9e927a9ecc68ac750b74a28
+=======
+  const {id,name,email,isnotlog}=this.state
+
+         if(localStorage.usertoken||!isnotlog ){
+>>>>>>> 37c15e85476ef111c9e927a9ecc68ac750b74a28
   return (
     <div>
 <Row>
 <Col md={2} sm={1} xs={1}>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 </Col>
@@ -91,6 +44,12 @@ render(){
  <span className="fa fa-sign-out"></span>Logout</Button>
  
 </Col>
+=======
+ <Button className="drop" size='sm' variant="danger" onClick={this.logout.bind(this)}>
+ <span className="fa fa-sign-out"></span>Logout</Button>
+ 
+</Col>
+>>>>>>> 37c15e85476ef111c9e927a9ecc68ac750b74a28
 <Col md={8} sm={10} xs={10} className="apiback">
 <h1>welcome home!!</h1>
 {this.state.loading?
@@ -130,6 +89,9 @@ render(){
 }
 
 </Col>
+<<<<<<< HEAD
+>>>>>>> 37c15e85476ef111c9e927a9ecc68ac750b74a28
+=======
 >>>>>>> 37c15e85476ef111c9e927a9ecc68ac750b74a28
 <Col md={2} sm={1} xs={1}></Col>
 </Row>

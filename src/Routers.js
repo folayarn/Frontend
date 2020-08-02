@@ -2,8 +2,11 @@ import React,{Component} from 'react';
 import { Row,Col,Alert} from 'react-bootstrap'
 import Below from './components/Below'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Header from './components/Header'
 import HeaderPro from './components/HeaderPro'
+=======
+>>>>>>> 37c15e85476ef111c9e927a9ecc68ac750b74a28
 =======
 >>>>>>> 37c15e85476ef111c9e927a9ecc68ac750b74a28
 
@@ -61,6 +64,7 @@ render(){
 <Below/>
 </Col>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <Col md={2} >
 </Col>
 </Row>
@@ -70,6 +74,12 @@ render(){
 </Col>
 </Row>
 </Col>
+=======
+<Col md={2} > 
+</Col>
+</Row>
+</Col>
+>>>>>>> 37c15e85476ef111c9e927a9ecc68ac750b74a28
 
 
 {this.state.loading?
@@ -81,6 +91,9 @@ render(){
 
 </Col>
 }
+<<<<<<< HEAD
+>>>>>>> 37c15e85476ef111c9e927a9ecc68ac750b74a28
+=======
 >>>>>>> 37c15e85476ef111c9e927a9ecc68ac750b74a28
 
 </Row>
