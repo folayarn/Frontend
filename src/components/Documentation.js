@@ -15,7 +15,7 @@ import { Row,Col,Alert} from 'react-bootstrap'
 
 </Col> 
  
-<Col className='text-left api' md={10} sm={10} xs={10} >
+<Col className='text-left' md={10} sm={10} xs={10} >
  <h1>Available Api</h1>
 
  <Alert variant="dark">

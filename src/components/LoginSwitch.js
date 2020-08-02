@@ -1,5 +1,4 @@
 import React,{Component} from 'react';
-
 import {Col,Button} from 'react-bootstrap'
 import {Route,Switch} from 'react-router-dom'
 import axios from 'axios'
@@ -39,13 +38,15 @@ class LoginSwitch extends Component{
                           }
                    
                    
-                          logout=(e)=>{
-                            e.preventDefault()
-                        localStorage.removeItem('usertoken')
-                        this.setState({
-                         isnotlog:true
-                        })
-                        }
+       
+  logout=(e)=>{
+    e.preventDefault()
+localStorage.removeItem('usertoken')
+this.setState({
+ isnotlog:true
+})
+}
+                  
                    
                    
                        
@@ -57,27 +58,31 @@ render(){
            name:this.state.name,
            email:this.state.email,
            loading:this.state.loading,
-           
+           isnotlog:this.state.isnotlog
          }
        
   return (
            <div>
            <HeaderPro/>
-         <Button className="drop_one" size='sm' variant="danger" onClick={this.logout.bind(this)}>
+          <Button size='sm' variant="danger" 
+          onClick={this.logout}>
          <span className="fa fa-sign-out"></span>Logout</Button>
-         
+
+
+
+
 <Col md={12} sm={12} xs={12}>
 <Switch>
 <Route exact path='/profile'>
 <Profile {...user}/>
 </Route>
-<Route exact path='/profile/home'>
+<Route  path='/profile/home'>
 <Home name={this.state.name}/>
 </Route>
 </Switch>
 </Col>
- </div> 
-  );
+ </div>
+  )
 
 
 }

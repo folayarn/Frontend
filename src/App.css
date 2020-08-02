@@ -62,17 +62,8 @@
     margin-top: 60px;
   }
   
-  .api ul:only-child{
-    background-color:#5e605b;
-    padding: 10px;
-    color:white;
-    font-style: italic;
-  }
   
-  .api ul li{
-    padding: 10px;
-    list-style: none;
-  }
+  
   body{
   margin-top:0px;
     
