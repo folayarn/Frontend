@@ -7,8 +7,8 @@ import {Route,Switch} from 'react-router-dom'
 import Routers from './Routers'
 import Login from './components/Login'
 import Register from './components/Register'
-import Profile from './components/Profile'
 import Congrats from './components/Congrats'
+import LoginSwitch from './components/LoginSwitch';
 
 
 
@@ -34,7 +34,7 @@ render(){
 <Login/>
 </Route>
 <Route  path='/profile'>
-<Profile/>
+<LoginSwitch/>
 </Route>
 <Route  path='/success'>
 <Congrats/>
