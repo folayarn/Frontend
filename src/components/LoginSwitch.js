@@ -5,6 +5,7 @@ import axios from 'axios'
 import Profile from './Profile'
 import Home from './Home'
 import HeaderPro from './HeaderPro';
+import PageNotFound from './PageNotFound';
 
 class LoginSwitch extends Component{
          constructor(){
@@ -69,6 +70,9 @@ render(){
 </Route>
 <Route exact path='/profile/home'>
 <Home name={this.state.name}/>
+</Route>
+           <Route path='*'>
+<PageNotFound/>
 </Route>
 </Switch>
 </Col>
