@@ -9,6 +9,7 @@ import Login from './components/Login'
 import Register from './components/Register'
 import Congrats from './components/Congrats'
 import LoginSwitch from './components/LoginSwitch';
+import PageNotFound from './components/PageNotFound';
 
 
 
@@ -27,17 +28,20 @@ render(){
 
 <Routers/>
 </Route>
-<Route  path='/register'>
+<Route exact path='/register'>
 <Register/>
 </Route>
-<Route  path='/login'>
+<Route exact  path='/login'>
 <Login/>
 </Route>
-<Route  path='/profile'>
+<Route exact path='/profile'>
 <LoginSwitch/>
 </Route>
-<Route  path='/success'>
+<Route exact path='/success'>
 <Congrats/>
+</Route>
+    <Route path='*'>
+<PageNotFound/>
 </Route>
 </Switch>
 </Col>
