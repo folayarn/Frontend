@@ -34,7 +34,7 @@ render(){
 <Route exact  path='/login'>
 <Login/>
 </Route>
-<Route exact path='/profile'>
+<Route path='/profile'>
 <LoginSwitch/>
 </Route>
 <Route exact path='/success'>
